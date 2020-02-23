@@ -5,7 +5,9 @@ module.exports = {
   },
   extends: [
     'plugin:@typescript-eslint/recommended',
-    // 'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    // 'prettier/@typescript-eslint',
+    'plugin:jest/recommended',
+    'plugin:react/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -16,7 +18,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['babel', '@typescript-eslint'],
+  plugins: ['babel', '@typescript-eslint', 'jest'],
   rules: {
     '@typescript-eslint/array-type': 'error',
     '@typescript-eslint/no-explicit-any': 'off',
@@ -102,8 +104,10 @@ module.exports = {
     'no-unused-expressions': 'error',
     'no-unused-labels': 'error',
     'object-shorthand': 'error',
+    'no-unused-vars': 'error',
     'one-var': ['error', 'never'],
-    // 'prefer-arrow/prefer-arrow-functions': 'error',
+    '@typescript-eslint/isolatedModules': 'off',
+    // '@typescript-eslint/await-thenable': 'error',
     radix: 'error',
     'spaced-comment': 'error',
     'use-isnan': 'error',
