@@ -4,7 +4,7 @@ import App from './App';
 import dotenv from 'dotenv';
 import { Provider } from 'react-redux';
 import store from '@src/app/store';
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from '@src/serviceWorker';
 dotenv.config();
 
 ReactDOM.render(
