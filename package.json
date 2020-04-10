@@ -8,7 +8,7 @@
     "test": "npm run tailwind:css && react-app-rewired test",
     "eject": "react-scripts eject",
     "lint": "eslint -c .eslintrc.js --ext .ts ./src",
-    "tailwind:css": "tailwind build src/styles/tailwind.src.css -c tailwind.config.js -o src/styles/tailwind.css"
+    "tailwind:css": "tailwind build src/styles/tailwind.src.css -c tailwind.config.js -o src/styles/tailwind.min.css"
   },
   "eslintConfig": {
     "extends": "react-app"
