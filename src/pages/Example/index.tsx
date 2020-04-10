@@ -1,5 +1,28 @@
 import React from 'react';
+import styled from 'styled-components';
+import { useSelector, useDispatch } from 'react-redux';
+import { changeToggle, changeToggleAsync, exampleCount } from './exampleSlice';
+
+const Wrapper = styled.div`
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
 
 export default function Example(): React.ComponentElement<any, any> {
-  return <div>Hello, {process.env.REACT_APP_HELLO}!</div>;
+  const value = useSelector(exampleCount);
+  const dispatch = useDispatch();
+
+  return (
+    <Wrapper>
+      <div>Hello, {value}!</div>
+      <button onClick={(): any => dispatch(changeToggle())}>toggle</button>
+      <button onClick={(): any => dispatch(changeToggleAsync())}>
+        toggleAsync
+      </button>
+    </Wrapper>
+  );
 }
