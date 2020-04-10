@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeToggle, changeToggleAsync, exampleCount } from './exampleSlice';
+import { Action } from 'redux';
 
 const Wrapper = styled.div`
   display: flex;
@@ -19,8 +20,8 @@ export default function Example(): React.ComponentElement<any, any> {
   return (
     <Wrapper>
       <div>Hello, {value}!</div>
-      <button onClick={(): any => dispatch(changeToggle())}>toggle</button>
-      <button onClick={(): any => dispatch(changeToggleAsync())}>
+      <button onClick={(): Action => dispatch(changeToggle())}>toggle</button>
+      <button onClick={(): Action => dispatch(changeToggleAsync())}>
         toggleAsync
       </button>
     </Wrapper>
