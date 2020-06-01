@@ -1,8 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import { useSelector, useDispatch } from 'react-redux';
-import { changeToggle, changeToggleAsync, exampleCount } from './exampleSlice';
-import { Action } from 'redux';
+import { observer, inject } from 'mobx-react';
 
 const Wrapper = styled.div`
   display: flex;
@@ -13,17 +11,15 @@ const Wrapper = styled.div`
   flex-direction: column;
 `;
 
-export default function Example(): React.ComponentElement<any, any> {
-  const value = useSelector(exampleCount);
-  const dispatch = useDispatch();
-
-  return (
-    <Wrapper>
-      <div>Hello, {value}!</div>
-      <button onClick={(): Action => dispatch(changeToggle())}>toggle</button>
-      <button onClick={(): Action => dispatch(changeToggleAsync())}>
-        toggleAsync
-      </button>
-    </Wrapper>
-  );
+@inject('ExStore')
+@observer
+export default class Index extends Component<any> {
+  render(): React.ComponentElement<any, any> {
+    return (
+      <Wrapper>
+        {this.props.ExStore.yourStore}
+        <button onClick={this.props.ExStore.changeToggle}>Hello/World</button>
+      </Wrapper>
+    );
+  }
 }

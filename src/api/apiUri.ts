@@ -4,13 +4,15 @@ interface ApiUriTypes {
   test: string;
 }
 
-// Define your apiUri below.
-const apiUri: ApiUriTypes = {
-  production: 'https://apiuri',
-  development: 'https://dev.apiuri',
-  test: 'https://test.dev.apiuri',
-};
-
 export default (): string => {
+  if (!process.env.PROD_API_URI || !process.env.DEV_API_URI)
+    throw new Error('APIURI not defined. (ENV)');
+
+  const apiUri: ApiUriTypes = {
+    production: process.env.PROD_API_URI,
+    development: process.env.DEV_API_URI,
+    test: process.env.DEV_API_URI,
+  };
+
   return apiUri[process.env.NODE_ENV];
 };
