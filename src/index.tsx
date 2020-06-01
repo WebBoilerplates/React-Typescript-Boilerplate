@@ -4,7 +4,7 @@ import App from './App';
 import dotenv from 'dotenv';
 import { Provider } from 'mobx-react';
 import * as serviceWorker from '@src/serviceWorker';
-import store from '@src/store';
+import store from '@store/index';
 dotenv.config();
 
 ReactDOM.render(
