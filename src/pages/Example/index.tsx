@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { observer, inject } from 'mobx-react';
+import ExStore from '@store/ExStore';
 
 const Wrapper = styled.div`
   display: flex;
@@ -11,9 +12,13 @@ const Wrapper = styled.div`
   flex-direction: column;
 `;
 
-@inject('ExStore')
+interface Props {
+  ExStore: ExStore;
+}
+
 @observer
-export default class Index extends Component<any> {
+@inject('ExStore')
+export default class Index extends Component<Props> {
   render(): React.ComponentElement<any, any> {
     return (
       <Wrapper>
