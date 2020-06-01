@@ -16,8 +16,8 @@ interface Props {
   ExStore: ExStore;
 }
 
-@observer
 @inject('ExStore')
+@observer
 export default class Index extends Component<Props> {
   render(): React.ComponentElement<any, any> {
     return (
