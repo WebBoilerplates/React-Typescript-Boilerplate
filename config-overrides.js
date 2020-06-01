@@ -1,9 +1,17 @@
 const { alias, configPaths } = require('react-app-rewire-alias');
+const {
+  addDecoratorsLegacy,
+  disableEsLint,
+  override,
+} = require('customize-cra');
 
-module.exports = function override(config) {
+module.exports = (config) => {
   alias({
     ...configPaths('tsconfig.paths.json'),
   })(config);
 
-  return config;
+  const overrideConfig = {
+    ...override(disableEsLint(), addDecoratorsLegacy()),
+  };
+  return { ...config, ...overrideConfig };
 };
