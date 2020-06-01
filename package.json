@@ -3,11 +3,14 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "start": "npm run tailwind:css && cross-env react-app-rewired start",
-    "build": "npm run tailwind:css && cross-env react-app-rewired build",
+    "dev": "npm run tailwind:css && cross-env react-app-rewired start",
+    "build": "npm run tailwind:css && cross-env GENERATE_SOURCEMAP=false react-app-rewired build",
     "test": "npm run tailwind:css && react-app-rewired test",
     "eject": "react-scripts eject",
     "lint": "eslint -c .eslintrc.js --ext .ts ./src",
+    "enc:env": "openssl aes-256-cbc -e -in .env -out .env.pub -md md5 -k $PROGRAM_ENV_SECRET_KEY",
+    "dec:env": "openssl aes-256-cbc -d -in .env.pub -out .env -md md5 -k $PROGRAM_ENV_SECRET_KEY",
+    "dec:env-m": "openssl aes-256-cbc -d -in .env.pub -out .env -md md5 -k",
     "tailwind:css": "tailwind build src/styles/tailwind.src.css -c tailwind.config.js -o src/styles/tailwind.min.css"
   },
   "eslintConfig": {
