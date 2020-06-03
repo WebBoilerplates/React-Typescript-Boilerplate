@@ -107,19 +107,9 @@ module.exports = {
     'no-unused-vars': 'error',
     'one-var': ['error', 'never'],
     '@typescript-eslint/isolatedModules': 'off',
-    // '@typescript-eslint/await-thenable': 'error',
     radix: 'error',
     'spaced-comment': 'error',
     'use-isnan': 'error',
     'valid-typeof': 'off',
-    // '@typescript-eslint/tslint/config': [
-    //   'error',
-    //   {
-    //     rules: {
-    //       'jsdoc-format': true,
-    //       'no-reference-import': true,
-    //     },
-    //   },
-    // ],
   },
 };
