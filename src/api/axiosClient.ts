@@ -30,21 +30,18 @@ const baseClient = axios.create({
 async function renewAccessToken(): Promise<{ result: boolean }> {
   const refreshToken = localStorage.getItem('refresh-token');
   if (!refreshToken) {
-    console.error('Refresh token not found');
     return { result: false };
   }
   return baseClient
     .post('auth/resign', { token: refreshToken })
     .then((res) => {
-      console.log('Auth success');
       baseClient.defaults.headers.common['x-access-token'] =
         res.data.data.token;
       localStorage.setItem('access-token', res.data.data.token);
       return { result: true };
     })
     .catch((err) => {
-      console.error(err);
-      console.log(err.response.data);
+      console.error(err.response.data);
       return { result: false };
     });
 }
