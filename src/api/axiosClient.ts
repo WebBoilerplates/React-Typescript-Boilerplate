@@ -60,7 +60,6 @@ export async function resolver(
     .catch(async (result) => {
       if (result.response) {
         // Request has been resolved with code 400 ~ 500
-        console.log(result.response);
         console.error(
           `Error ${result.response.data.status} : ${result.response.data.message}`,
         );
