@@ -1,6 +1,6 @@
 {
   "name": "react-typescript-boilerplate",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "private": true,
   "scripts": {
     "dev": "npm run tailwind:css && cross-env react-app-rewired start",
