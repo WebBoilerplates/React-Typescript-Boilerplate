@@ -1,9 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from '../App';
+import { render } from '@testing-library/react';
 
-it('Renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+import App from '../App';
+import withProvider from '@util/withProvider';
+
+describe('<App/>', () => {
+  it('matches snapshot', () => {
+    const utils = render(withProvider(<App />));
+    expect(utils.container).toMatchSnapshot();
+  });
+  it('matches value', () => {
+    const utils = render(withProvider(<App />));
+    utils.getByText('Hello');
+    utils.getByText('Hello/World');
+  });
 });

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Example from '@pages/Example';
 import PageNotFound from '@pages/PageNotFound';
 
-const ClientRouter: React.ComponentElement<null, any> = (
+const ClientRouter: JSX.Element = (
   <>
     <Router>
       <Switch>
