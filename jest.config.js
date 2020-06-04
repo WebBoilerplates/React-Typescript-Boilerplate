@@ -4,8 +4,9 @@ const requireJSON = require('require-strip-json-comments');
 const { compilerOptions } = requireJSON('./tsconfig.paths.json');
 
 module.exports = {
+  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
   preset: 'ts-jest',
-  testEnvironment: 'node',
+  testEnvironment: 'jsdom',
   moduleNameMapper: {
     ...pathsToModuleNameMapper(compilerOptions.paths, {
       prefix: '<rootDir>',

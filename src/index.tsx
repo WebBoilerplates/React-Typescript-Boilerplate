@@ -1,19 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'mobx-react';
 import dotenv from 'dotenv';
 
 import App from './App';
 import * as serviceWorker from '@src/serviceWorker';
-import store from '@store/index';
 
-dotenv.config();
+import withProvider from '@util/withProvider';
 
-ReactDOM.render(
-  <Provider {...store}>
-    <App />
-  </Provider>,
-  document.getElementById('root'),
-);
+export const RootComponent = withProvider(<App />);
 
-serviceWorker.unregister();
+function Root(): void {
+  dotenv.config();
+
+  ReactDOM.render(RootComponent, document.getElementById('root'));
+
+  serviceWorker.unregister();
+}
+
+export default Root();
