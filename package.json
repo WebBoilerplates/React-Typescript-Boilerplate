@@ -35,7 +35,7 @@
     "dotenv": "^8.2.0",
     "immutable": "^4.0.0-rc.12",
     "mobx": "^5.15.4",
-    "mobx-react": "^6.2.2",
+    "mobx-react": "^6.3.1",
     "mobx-state-tree": "^3.16.0",
     "node-sass": "^4.14.1",
     "react": "^16.12.0",
