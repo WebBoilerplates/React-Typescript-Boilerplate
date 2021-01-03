@@ -46,7 +46,7 @@
     "require-strip-json-comments": "^2.0.0",
     "styled-components": "^4.4.1",
     "tailwindcss": "^1.1.4",
-    "typescript": "^3.7.2"
+    "typescript": "^3.9.7"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.1",
