@@ -1,9 +1,15 @@
-import { observable, action } from 'mobx';
+import { action, makeAutoObservable, observable } from 'mobx';
 
 export default class ExStore {
-  @observable yourStore = 'Hello';
+  constructor() {
+    makeAutoObservable(this, {
+      value: observable,
+      toggleValue: action,
+    });
+  }
+  value = 'Hello';
 
-  @action changeToggle = (): void => {
-    this.yourStore = this.yourStore === 'Hello' ? 'World' : 'Hello';
-  };
+  toggleValue() {
+    this.value = this.value === 'Hello' ? 'World' : 'Hello';
+  }
 }

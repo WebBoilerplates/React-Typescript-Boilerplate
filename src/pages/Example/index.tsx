@@ -19,11 +19,11 @@ interface Props {
 @inject('ExStore')
 @observer
 export default class Index extends Component<Props> {
-  render(): React.ComponentElement<any, any> {
+  render() {
     return (
       <Wrapper>
-        {this.props.ExStore.yourStore}
-        <button onClick={this.props.ExStore.changeToggle}>Hello/World</button>
+        {this.props.ExStore.value}
+        <button onClick={() => this.props.ExStore.toggleValue()}>Hello/World</button>
       </Wrapper>
     );
   }
