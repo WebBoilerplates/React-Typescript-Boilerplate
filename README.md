@@ -1,2 +1,2 @@
 # React-Typescript-Boilerplate
-## Intergrated with MobX
+## MobX Applied
