@@ -40,7 +40,7 @@
     "mobx-react": "^7.1.0",
     "mobx-state-tree": "^5.0.1",
     "node-sass": "^5.0.0",
-    "postcss": "^8.2.4",
+    "postcss": "^8.2.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router": "^5.2.0",
