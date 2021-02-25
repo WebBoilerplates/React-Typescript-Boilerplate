@@ -48,7 +48,7 @@
     "react-scripts": "^4.0.2",
     "require-strip-json-comments": "^2.0.0",
     "styled-components": "^5.2.1",
-    "tailwindcss": "^2.0.2",
+    "tailwindcss": "^2.0.3",
     "typescript": "^4.2.2"
   },
   "devDependencies": {
