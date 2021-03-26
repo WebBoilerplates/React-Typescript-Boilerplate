@@ -80,7 +80,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "26.6.0",
     "prettier": "^2.2.1",
-    "react-app-rewire-alias": "^1.0.0",
+    "react-app-rewire-alias": "^1.0.3",
     "react-app-rewired": "^2.1.8",
     "react-test-renderer": "^17.0.1",
     "ts-jest": "^26.5.2"
