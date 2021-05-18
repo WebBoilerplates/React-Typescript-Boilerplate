@@ -7912,10 +7912,10 @@ mobx-state-tree@^5.0.1:
   resolved "https://registry.yarnpkg.com/mobx-state-tree/-/mobx-state-tree-5.0.1.tgz#d495725fe11075d8fde8f02ab65db6736b44e014"
   integrity sha512-XZafwF1sJe6sp8L1kgf9Tz0SLo/UPf2pxsonnHaBQNsqbebw+0GC+IT3WxPEIe0/aQ73q4nY4SRgW1uyfd1KRA==
 
-mobx@^6.1.5:
-  version "6.1.5"
-  resolved "https://registry.yarnpkg.com/mobx/-/mobx-6.1.5.tgz#bef273670c520eb67d09938812de525ad7be4c9f"
-  integrity sha512-BsVAHEk/Ty+6BmCis0CUvA7E9u5aJpUkdRM91YwBt4lVha4heDLjRT43z2pqENeFuVZPfA1RRaf7sRcqRB2i4Q==
+mobx@^6.3.1:
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-6.3.1.tgz#6d2e519e7bb0275dd5b9b1fa81475894e85aad99"
+  integrity sha512-by0VQNBltxLKcQ0uIz2h2mnVv1ZV0ief8mRRw+0k7mL2vSS3806rZg42bt8Vy78szaODtij/5iWIGvc46ZC3Cw==
 
 modern-normalize@^1.0.0:
   version "1.0.0"
