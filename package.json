@@ -34,7 +34,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "cross-env": "^7.0.3",
-    "dotenv": "^8.2.0",
+    "dotenv": "^10.0.0",
     "eqb-request-client": "^0.2.0",
     "immutable": "^4.0.0-rc.12",
     "mobx": "^6.1.5",
